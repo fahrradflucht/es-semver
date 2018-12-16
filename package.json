@@ -1,6 +1,6 @@
 {
   "name": "es-semver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fork of the semantic version parser used by npm.",
   "module": "./src/index.js",
   "main": "./lib/index.js",
