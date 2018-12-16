@@ -1,13 +1,31 @@
-semver(1) -- The semantic versioner for npm
-===========================================
+# semver(1) -- The semantic versioner for npm
+
+A fork of [npm's semver package](https://github.com/npm/node-semver) that, in
+addition to the commonjs entry, provides es modules for the various
+functions. This enables treeshaking.
 
 ## Install
 
 ```bash
 npm install --save es-semver
-````
+```
 
 ## Usage
+
+As a an [es-module](https://tc39.github.io/ecma262/#sec-modules):
+
+```js
+import { valid, clean, satisfies, gt, lt, valid, coerce } from "es-semver";
+
+valid('1.2.3') // '1.2.3'
+valid('a.b.c') // null
+clean('  =v1.2.3   ') // '1.2.3'
+satisfies('1.2.3', '1.x || >=2.5.0 || 5.0.0 - 7.2.3') // true
+gt('1.2.3', '9.8.7') // false
+lt('1.2.3', '9.8.7') // true
+valid(coerce('v2')) // '2.0.0'
+valid(coerce('42.6.7.9.3-alpha')) // '42.6.7'
+```
 
 As a node module:
 
