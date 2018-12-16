@@ -20,6 +20,7 @@
     "semver": "./bin/semver"
   },
   "files": [
+    "index.d.ts",
     "bin",
     "range.bnf",
     "lib",
