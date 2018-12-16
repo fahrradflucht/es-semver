@@ -4,6 +4,7 @@
   "description": "The semantic version parser used by npm.",
   "module": "./src/index.js",
   "main": "./lib/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "tap test/*.js --cov -J",
     "posttest": "standard bin/semver *.js src/*.js"
