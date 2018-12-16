@@ -4,7 +4,7 @@ semver(1) -- The semantic versioner for npm
 ## Install
 
 ```bash
-npm install --save semver
+npm install --save es-semver
 ````
 
 ## Usage
@@ -12,7 +12,7 @@ npm install --save semver
 As a node module:
 
 ```js
-const semver = require('semver')
+const semver = require('es-semver')
 
 semver.valid('1.2.3') // '1.2.3'
 semver.valid('a.b.c') // null
