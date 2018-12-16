@@ -4,6 +4,7 @@
 //                 BendingBender <https://github.com/BendingBender>
 //                 Lucian Buzzo <https://github.com/LucianBuzzo>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/semver
+// License: https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/6a5e2cc/LICENSE
 
 export const SEMVER_SPEC_VERSION: "2.0.0";
 
