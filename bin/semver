@@ -21,7 +21,7 @@ var coerce = false
 
 var identifier
 
-var semver = require('../semver')
+var semver = require('../')
 
 var reverse = false
 
@@ -105,7 +105,8 @@ function failInc () {
 
 function fail () { process.exit(1) }
 
-function success () {
+// TODO: There is a bug upstream where versions is not passed down
+function success (versions) {
   var compare = reverse ? 'rcompare' : 'compare'
   versions.sort(function (a, b) {
     return semver[compare](a, b, options)

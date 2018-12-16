@@ -2,12 +2,14 @@
   "name": "semver",
   "version": "5.6.0",
   "description": "The semantic version parser used by npm.",
-  "main": "semver.js",
+  "module": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "tap test/*.js --cov -J",
-    "posttest": "standard bin/semver *.js **/*.js"
+    "posttest": "standard bin/semver *.js src/*.js"
   },
   "devDependencies": {
+    "rollup": "^0.68.0",
     "standard": "^12.0.1",
     "tap": "^12.0.1"
   },
@@ -19,6 +21,7 @@
   "files": [
     "bin",
     "range.bnf",
-    "semver.js"
+    "lib",
+    "src"
   ]
 }
